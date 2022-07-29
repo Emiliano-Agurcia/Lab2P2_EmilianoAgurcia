@@ -19,6 +19,17 @@ public class Clientes {
     int Edad;
     double Saldo;//Saldo a pagar por carro en reparación
     
+    public Clientes(){
+        
+    }
+    
+    public Clientes(String Nombre, String ID, int Edad, double Saldo){
+        this.Nombre = Nombre;
+        this.ID = ID;
+        this.Edad = Edad;
+        this.Saldo = Saldo;
+    }
+    
     public void setNombre(String Nombre){
         this.Nombre = Nombre;
     }
@@ -36,7 +47,18 @@ public class Clientes {
     public void setEdad(int Edad){
         this.Edad = Edad;
     }
-    public getEdad(){
+    public int getEdad(){
         return Edad;
+    }
+    
+    public void setSaldo(double Saldo){
+        this.Saldo = Saldo;
+    }
+    public double getSaldo(){
+        return Saldo;
+    }
+    
+    public String toString(){
+        return "\nNombre: "+Nombre+"\nNúmero de Identificación: "+ID+"\nEdad: "+Edad+" años"+"\nSaldo a pagar: Lps."+Saldo;
     }
 }
